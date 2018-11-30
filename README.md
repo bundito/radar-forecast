@@ -22,7 +22,7 @@ This is the trickiest part. It's not hard, just requires a few steps.
    * https://radblast.wunderground.com/cgi-bin/radar/WUNIDS_map?station=MDW&brand=wui&num=1&delay=15&type=TR0&frame=0&scale=0.75&noclutter=0&showstorms=0&mapx=400&mapy=240&centerx=400&centery=240&transx=0&transy=0&showlabels=1&severe=0&rainsnow=1&lightning=0&smooth=0&rand=25725764&lat=0&lon=0&label=you
    * becomes
    * https://bit.ly/2QtHrqm
- 8. This is your image URL. Don't lost it or you'll have to start over.
+ 8. This is your image URL. Don't lose it or you'll have to start over.
  
  ## Step 2: Card Setup
  This is the easy bit.
