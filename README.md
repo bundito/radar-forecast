@@ -27,7 +27,7 @@ This is the trickiest part. It's not hard, just requires a few steps.
  ## Step 2: Card Setup
  This is the easy bit.
  
- - Copy the `radar-forecast.js` file from this repository and drop it in your <config>/www directory.
+ - Copy the `radar-forecast.js` file from this repository and drop it in your `<config>/www` directory.
  - Add the required include lines at the top of your `ui-lovelace.yaml` file:
 ----
     - url: /local/radar-forecast.js?v=1
