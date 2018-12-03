@@ -58,8 +58,8 @@ To place your card in your display, here's the configuration:
   image: https://bit.ly/2FNnlTT
   title: Current ORD Forecast
   forecast: sensor.dark_sky_daily_summary
-  high: sensor.dark_sky_daytime_high_temperature_0
-  low: sensor.dark_sky_overnight_low_temperature_0
+  high: sensor.dark_sky_daytime_high_temperature_0       <-------
+  low: sensor.dark_sky_overnight_low_temperature_0       <-------
   summary: sensor.dark_sky_summary
   units: F
 ~~~~
