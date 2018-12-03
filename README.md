@@ -24,7 +24,24 @@ This is the trickiest part. It's not hard, just requires a few steps.
    * https://bit.ly/2QtHrqm
  8. This is your image URL. Don't lose it or you'll have to start over.
  
- ## Step 2: Card Setup
+ ## Sensor Setup
+ Version 0.83.1 introduced a minor change to the Dark Sky sensor. Some sensors were renamed with `_0` at the end, with "Day 0" meaning "today". So you've got to make sure your Dark Sky sensor setup now looks like this:
+ 
+ ~~~
+ 
+ - platform: darksky
+   api_key: xxxxxxxxx
+   forecast:
+    - 0           <-------- ADD THIS
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+ (and so on)
+ ~~~
+ 
+ ## Step 3: Card Setup
  This is the easy bit.
  
  - Copy the `radar-forecast.js` file from this repository and drop it in your `<config>/www` directory.
@@ -41,11 +58,13 @@ To place your card in your display, here's the configuration:
   image: https://bit.ly/2FNnlTT
   title: Current ORD Forecast
   forecast: sensor.dark_sky_daily_summary
-  high: sensor.dark_sky_daytime_high_temperature
-  low: sensor.dark_sky_overnight_low_temperature
+  high: sensor.dark_sky_daytime_high_temperature_0
+  low: sensor.dark_sky_overnight_low_temperature_0
   summary: sensor.dark_sky_summary
   units: F
 ~~~~
+
+**Version 0.83.1 change** The high and low temperatures now need **`_0`** added to the end of their definition. If you don't change or include this, the card is going to fail and blank out your page. That's not cool at all.
 
 Note that we're assuming you've already got all the required Dark Sky sensors imported in your `configuration.yaml`. If you need help with this part, check out the [Dark Sky Sensor](https://www.home-assistant.io/components/sensor.darksky/) component directions.
 
