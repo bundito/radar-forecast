@@ -58,8 +58,8 @@ To place your card in your display, here's the configuration:
   image: https://bit.ly/2FNnlTT
   title: Current ORD Forecast
   forecast: sensor.dark_sky_daily_summary
-  high: sensor.dark_sky_daytime_high_temperature_0       <-------
-  low: sensor.dark_sky_overnight_low_temperature_0       <-------
+  high: sensor.dark_sky_daytime_high_temperature_0d       <-------
+  low: sensor.dark_sky_overnight_low_temperature_0d       <-------
   summary: sensor.dark_sky_summary
   units: F
 ~~~~
@@ -70,6 +70,10 @@ Note that we're assuming you've already got all the required Dark Sky sensors im
 
 `title` is a freeform field - put in anything you like.
 `units` is a dumb field - put in `F` or `C` or whatever you like. It's just text.
+
+Reload your display and you should have an animated radar card. 
+
+**Version 0.91.0 change** The high and low temperatures now need **`_0d`** added to the end of their definition. If you don't change or include this, the card is going to fail and blank out your page. This is similar to the change required in 0.83.1.
 
 Reload your display and you should have an animated radar card. 
 
